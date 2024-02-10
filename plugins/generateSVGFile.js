@@ -3,7 +3,7 @@ import {sync as globSync} from 'glob';
 import path from 'path';
 
 const svgFolder = './src/assets/icons';
-const outputFolder = './src/components/icon/icons';
+const outputFolder = './src/components/Icon/Icons';
 const svgFiles = globSync(svgFolder + '/*.svg');
 let errors = 0;
 

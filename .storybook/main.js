@@ -7,6 +7,8 @@ const config = {
         '@storybook/addon-onboarding',
         '@storybook/addon-interactions',
         '@storybook/addon-designs',
+        '@whitespace/storybook-addon-html',
+        '@storybook/addon-a11y',
     ],
     framework: {
         name: '@storybook/react-vite',
@@ -16,5 +18,8 @@ const config = {
         autodocs: 'tag',
     },
     staticDirs: ['../public', '../dist/assets'],
+    typescript: {
+        reactDocgen: 'react-docgen',
+    },
 };
 export default config;

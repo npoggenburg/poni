@@ -1,4 +1,4 @@
-import React, {FC, Suspense, lazy} from 'react';
+import React, {FC, ReactNode, Suspense, lazy} from 'react';
 import './Button.scss';
 import clsx from 'clsx';
 import {IconTypes} from '../Icon/Icon';
@@ -13,15 +13,15 @@ export const IconPositionTypes = ['before', 'after'] as const;
 type ButtonPropIconPosition = (typeof IconPositionTypes)[number];
 
 interface ButtonProps {
-    label: string;
+    children?: ReactNode;
     variant?: ButtonPropVariant;
     size?: ButtonPropSize;
-    icon?: typeof IconTypes;
+    icon?: (typeof IconTypes)[number];
     iconPosition?: ButtonPropIconPosition;
 }
 
 const Button: FC<ButtonProps> = ({
-    label,
+    children,
     variant = VariantTypes[0],
     size = SizeTypes[1],
     icon,
@@ -47,15 +47,18 @@ const Button: FC<ButtonProps> = ({
     const iconSize = size === 'lg' ? 'md' : 'sm';
 
     const Icon = lazy(() => import('../Icon/Icon'));
-    const iconComponent = (
-        <Suspense>
-            <Icon name={icon} size={iconSize} />
-        </Suspense>
-    );
+    let iconComponent;
+    if (icon) {
+        iconComponent = (
+            <Suspense>
+                <Icon name={icon} size={iconSize} />
+            </Suspense>
+        );
+    }
     return (
         <button type="button" className={variantClasses} {...props}>
             {iconPosition === 'before' && iconComponent}
-            {label}
+            {children}
             {iconPosition === 'after' && iconComponent}
         </button>
     );

@@ -24,7 +24,7 @@ const Icon: FC<IconProps> = ({name, size}) => {
         [size === 'md' && 'h-6 w-6'],
         [size === 'lg' && 'h-8 w-8'],
     );
-    console.log(classes);
+
     const iconComponents: {[key: string]: JSX.Element} = {
         'chevron-up': <ChevronUpIcon className={classes} />,
         'chevron-right': <ChevronRightIcon className={classes} />,
@@ -39,7 +39,7 @@ const Icon: FC<IconProps> = ({name, size}) => {
     }
 
     return (
-        <i>
+        <i role="img" aria-label={name}>
             <Suspense>{IconComponent}</Suspense>
         </i>
     );

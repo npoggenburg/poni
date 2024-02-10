@@ -1,10 +1,10 @@
 import './App.css';
-import Slider from './components/Slider/Slider';
+import StageSlider from './components/StageSlider/StageSlider';
 
 function App() {
     return (
         <>
-            <Slider></Slider>
+            <StageSlider />
         </>
     );
 }

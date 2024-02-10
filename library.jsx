@@ -1,1 +1,1 @@
-import './src/components/Slider/Slider.lib.tsx';
+import './src/components/StageSlider/StageSlider.lib.tsx';
