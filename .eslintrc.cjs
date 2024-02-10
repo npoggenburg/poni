@@ -18,5 +18,6 @@ module.exports = {
         'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
         'react/jsx-uses-vars': 'error',
         'react/jsx-uses-react': 'error',
+        'react/no-unescaped-entities': 0,
     },
 };
