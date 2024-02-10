@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
-import Slider from './slider';
-import './slider.lib';
+import Slider from './Slider';
+import './Slider.lib';
 
 export default {
     title: 'Elements/Components/Slider',

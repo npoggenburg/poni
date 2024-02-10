@@ -1,10 +1,10 @@
 import React, {lazy, Suspense} from 'react';
 
-const LazyIcon = lazy(() => import('./icon'));
+const LazyIcon = lazy(() => import('./Icon'));
 
 const Icon = (props: JSX.IntrinsicAttributes & {children?: React.ReactNode}) => (
     <Suspense fallback={null}>
-        <LazyIcon {...props} />
+        <LazyIcon name={'chevron-up'} {...props} />
     </Suspense>
 );
 

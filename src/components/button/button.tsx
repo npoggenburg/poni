@@ -1,31 +1,39 @@
-import React, {FC} from 'react';
-import './button.scss';
+import React, {FC, Suspense, lazy} from 'react';
+import './Button.scss';
 import clsx from 'clsx';
+import {IconTypes} from '../icon/Icon';
 
 export const VariantTypes = ['primary', 'secondary'] as const;
 type ButtonPropVariant = (typeof VariantTypes)[number];
 
-export const SizeTypes = ['small', 'medium', 'large'] as const;
+export const SizeTypes = ['sm', 'md', 'lg'] as const;
 type ButtonPropSize = (typeof SizeTypes)[number];
+
+export const IconPositionTypes = ['before', 'after'] as const;
+type ButtonPropIconPosition = (typeof IconPositionTypes)[number];
 
 interface ButtonProps {
     label: string;
     variant?: ButtonPropVariant;
     size?: ButtonPropSize;
+    icon?: typeof IconTypes;
+    iconPosition?: ButtonPropIconPosition;
 }
 
 const Button: FC<ButtonProps> = ({
     label,
     variant = VariantTypes[0],
     size = SizeTypes[1],
+    icon,
+    iconPosition = 'before',
     ...props
 }) => {
     const variantClasses = clsx(
         [variant === 'primary' && 'bg-blue-500 text-white shadow-blue-500/20'],
         [variant === 'secondary' && 'bg-red-500 text-white shadow-red-500/20'],
-        [size === 'small' && 'px-4 py-2 text-xs'],
-        [size === 'medium' && 'px-6 py-3 text-sm'],
-        [size === 'large' && 'px-10 py-6'],
+        [size === 'sm' && 'gap-2 px-4 py-2 text-xs'],
+        [size === 'md' && 'gap-2 px-6 py-3 text-sm'],
+        [size === 'lg' && 'gap-4 px-10 py-6'],
         [
             'select-none rounded-lg text-center align-middle font-sans font-bold uppercase shadow-md transition-all',
         ],
@@ -36,15 +44,19 @@ const Button: FC<ButtonProps> = ({
         ['inline-flex items-center'],
     );
 
+    const iconSize = size === 'lg' ? 'md' : 'sm';
+
+    const Icon = lazy(() => import('../icon/Icon'));
+    const iconComponent = (
+        <Suspense>
+            <Icon name={icon} size={iconSize} />
+        </Suspense>
+    );
     return (
         <button type="button" className={variantClasses} {...props}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="me-2 h-4 w-4">
-                <path
-                    fill="currentColor"
-                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-                />
-            </svg>
+            {iconPosition === 'before' && iconComponent}
             {label}
+            {iconPosition === 'after' && iconComponent}
         </button>
     );
 };

@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 
-const LazySlider = lazy(() => import('./slider'));
+const LazySlider = lazy(() => import('./Slider'));
 
 const Slider = (props: JSX.IntrinsicAttributes & {children?: React.ReactNode}) => (
     <Suspense fallback={null}>

@@ -1,6 +1,6 @@
 import {FC, useEffect} from 'react';
-import './slider.scss';
-import {Slider as SliderLib} from './slider.lib';
+import './Slider.scss';
+import {Slider as SliderLib} from './Slider.lib';
 import React from 'react';
 
 interface SliderProps {}
