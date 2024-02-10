@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import './demopage.scss';
+import './Demopage.scss';
 import Grid from '../Grid/Grid';
 import Text from '../Text/Text';
 import Column from '../Grid/Column';

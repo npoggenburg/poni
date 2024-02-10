@@ -1,7 +1,7 @@
 import React, {FC, Suspense, lazy} from 'react';
 import './Button.scss';
 import clsx from 'clsx';
-import {IconTypes} from '../icon/Icon';
+import {IconTypes} from '../Icon/Icon';
 
 export const VariantTypes = ['primary', 'secondary'] as const;
 type ButtonPropVariant = (typeof VariantTypes)[number];
@@ -46,7 +46,7 @@ const Button: FC<ButtonProps> = ({
 
     const iconSize = size === 'lg' ? 'md' : 'sm';
 
-    const Icon = lazy(() => import('../icon/Icon'));
+    const Icon = lazy(() => import('../Icon/Icon'));
     const iconComponent = (
         <Suspense>
             <Icon name={icon} size={iconSize} />
