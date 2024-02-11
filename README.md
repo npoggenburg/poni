@@ -17,7 +17,21 @@ One important feature is to export all necessary assts `Css` `Js` `Icons` withou
 
 ## Install
 
-TBD
+Clone the Repository:
+
+`git clone git@github.com:npoggenburg/poni.git`
+
+Install NPM Dependencies
+
+`npm i`
+
+Do a "First build" to setup the folders
+
+`npm run build`
+
+Run the Storybook
+
+`npm run storybook`
 
 ---
 
