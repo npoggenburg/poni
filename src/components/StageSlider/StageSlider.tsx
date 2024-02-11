@@ -4,9 +4,11 @@ import {StageSlider as StageSliderLib} from './StageSlider.lib';
 import Icon from '../Icon/Icon';
 import clsx from 'clsx';
 
-interface StageSliderProps {}
+interface StageSliderProps {
+    items?: number;
+}
 
-const StageSlider: FC<StageSliderProps> = () => {
+const StageSlider: FC<StageSliderProps> = ({items = 1}) => {
     useEffect(() => {
         const stageSliderElements: NodeListOf<HTMLElement> = document.querySelectorAll(
             '[data-stage-slider="container"]',
@@ -17,37 +19,24 @@ const StageSlider: FC<StageSliderProps> = () => {
             }
         }
     }, []);
+    const itemArray = Array.from({length: items}, (_, index) => index + 1);
 
     return (
         <div className="swiper" data-stage-slider="container">
             <div className="swiper-wrapper">
-                <div className="swiper-slide">
-                    <img
-                        src="//placehold.co/600x400?text=Slide 1"
-                        title=""
-                        alt=""
-                        className={clsx([' aspect-video max-h-[60vh] w-full object-cover'])}
-                    />
-                </div>
-                <div className="swiper-slide">
-                    <img
-                        src="//placehold.co/600x400?text=Slide 2"
-                        title=""
-                        alt=""
-                        className={clsx([' aspect-video max-h-[60vh] w-full object-cover'])}
-                    />
-                </div>
-                <div className="swiper-slide">
-                    <img
-                        src="//placehold.co/600x400?text=Slide 3"
-                        title=""
-                        alt=""
-                        className={clsx([' aspect-video max-h-[60vh] w-full object-cover'])}
-                    />
-                </div>
+                {itemArray.map((slide, index) => (
+                    <div className="swiper-slide" key={index} data-stage-slider="slide">
+                        <img
+                            src={`//placehold.co/600x400?text=Slide ${index + 1}`}
+                            title=""
+                            alt=""
+                            className={clsx([' aspect-video max-h-[60vh] w-full object-cover'])}
+                        />
+                    </div>
+                ))}
             </div>
             <div
-                className={clsx(['flex content-stretch items-center gap-1'])}
+                className={clsx(['flex hidden content-stretch items-center gap-1'])}
                 data-stage-slider="pagination"
             ></div>
 
@@ -77,7 +66,7 @@ const StageSliderNavigationButton: FC<StageSliderNavigationButtonProps> = ({
                 ],
                 ['hover:bg-slate-900/70'],
                 [
-                    'absolute top-1/2 z-10 -mt-5 flex -translate-y-1/2 transform-gpu cursor-pointer items-center justify-center',
+                    'absolute top-1/2 z-10 -mt-5 flex hidden -translate-y-1/2 transform-gpu cursor-pointer items-center justify-center',
                 ],
                 [direction === 'prev' && 'left-0 '],
                 [direction === 'next' && 'right-0 '],
