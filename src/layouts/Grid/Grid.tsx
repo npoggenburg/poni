@@ -11,12 +11,12 @@ interface GridProps {
               xl?: number;
               xxl?: number;
           };
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 const Grid: React.FC<GridProps> = ({columns, children}) => {
     const classes = clsx(
-        ['grid gap-6'],
+        ['grid w-full gap-6'],
         [typeof columns === 'number' && 'grid-cols-' + columns],
         [typeof columns === 'object' && columns.sm && 'sm:grid-cols-' + columns.sm],
         [typeof columns === 'object' && columns.md && 'md:grid-cols-' + columns.md],

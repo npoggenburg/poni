@@ -1,5 +1,4 @@
 import {FC, useEffect} from 'react';
-import './Slider.scss';
 import {Slider as SliderLib} from './Slider.lib';
 import React from 'react';
 

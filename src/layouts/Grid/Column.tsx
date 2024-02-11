@@ -1,7 +1,7 @@
 import React, {ReactNode} from 'react';
 
 interface ColumnProps {
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 const Column: React.FC<ColumnProps> = ({children}) => {

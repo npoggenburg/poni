@@ -1,5 +1,4 @@
 import React, {FC, ReactNode} from 'react';
-import './Text.scss';
 import clsx from 'clsx';
 
 export const VariantTypes = ['default', 'lead', 'small', 'tiny'] as const;

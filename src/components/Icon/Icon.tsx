@@ -1,5 +1,4 @@
 import React, {FC, Suspense, lazy} from 'react';
-import './Icon.scss';
 import clsx from 'clsx';
 
 export const IconTypes = ['chevron-up', 'chevron-right', 'chevron-down', 'chevron-left'] as const;

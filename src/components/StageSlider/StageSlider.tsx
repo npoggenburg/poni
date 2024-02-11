@@ -1,5 +1,4 @@
 import React, {FC, ReactNode, useEffect} from 'react';
-import './StageSlider.scss';
 import {StageSlider as StageSliderLib} from './StageSlider.lib';
 import Heading from '../Heading/Heading';
 import Text from '../Text/Text';
@@ -25,25 +24,27 @@ const StageSlider: FC<StageSliderProps> = ({items = 1}) => {
     const itemArray = Array.from({length: items}, (_, index) => index + 1);
 
     return (
-        <div className="swiper" data-stage-slider="container">
-            <div className="swiper-wrapper">
-                {itemArray.map((slide, index) => (
-                    <div className="swiper-slide" key={index} data-stage-slider="slide">
-                        <StageSliderSlide></StageSliderSlide>
-                    </div>
-                ))}
-            </div>
-            <div
-                className={clsx(['flex hidden content-stretch items-center gap-1'])}
-                data-stage-slider="pagination"
-            ></div>
+        <div className="">
+            <div className="swiper mx-auto max-w-screen-xl" data-stage-slider="container">
+                <div className="swiper-wrapper">
+                    {itemArray.map((slide, index) => (
+                        <div className="swiper-slide" key={index} data-stage-slider="slide">
+                            <StageSliderSlide></StageSliderSlide>
+                        </div>
+                    ))}
+                </div>
+                <div
+                    className={clsx(['flex hidden content-stretch items-center gap-1'])}
+                    data-stage-slider="pagination"
+                ></div>
 
-            <StageSliderNavigationButton direction={'prev'}>
-                <Icon name="chevron-left" size="md" />
-            </StageSliderNavigationButton>
-            <StageSliderNavigationButton direction={'next'}>
-                <Icon name="chevron-right" size="md" />
-            </StageSliderNavigationButton>
+                <StageSliderNavigationButton direction={'prev'}>
+                    <Icon name="chevron-left" size="md" />
+                </StageSliderNavigationButton>
+                <StageSliderNavigationButton direction={'next'}>
+                    <Icon name="chevron-right" size="md" />
+                </StageSliderNavigationButton>
+            </div>
         </div>
     );
 };
@@ -79,14 +80,12 @@ const StageSliderNavigationButton: FC<StageSliderNavigationButtonProps> = ({
 interface StageSliderSlideProps {}
 const StageSliderSlide: FC<StageSliderSlideProps> = () => {
     return (
-        <div>
+        <div className="flex">
             <div>
                 <img src="https://placehold.co/600x400" alt="" />
             </div>
-            <div>
-                <Heading variant={'h2'} className="asd">
-                    Slide Main Title
-                </Heading>
+            <div className="p-6">
+                <Heading variant={'h2'}>Slide Main Title</Heading>
                 <Heading variant={'h3'}>Slide Subtitle or Mini Description</Heading>
                 <Text as={'p'}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio eius fugit

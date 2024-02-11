@@ -1,5 +1,4 @@
 import React, {FC, ReactNode, Suspense, lazy} from 'react';
-import './Button.scss';
 import clsx from 'clsx';
 import {IconTypes} from '../Icon/Icon';
 
