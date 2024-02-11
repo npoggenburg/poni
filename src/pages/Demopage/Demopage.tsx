@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import './Demopage.scss';
-import Grid from '../../components/Grid/Grid';
+import Grid from '../../layouts/Grid/Grid';
 import Text from '../../components/Text/Text';
-import Column from '../../components/Grid/Column';
+import Column from '../../layouts/Grid/Column';
 import Button from '../../components/Button/Button';
 import Heading from '../../components/Heading/Heading';
 import Icon from '../../components/Icon/Icon';

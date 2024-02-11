@@ -6,17 +6,36 @@
     "component": {
         "default": {
             "path": "src/components",
-            "withStyle": true,
+            "withStyle": false,
             "withTest": false,
             "withStory": true,
-            "withLazy": true
+            "withLazy": true,
+            "customTemplates": {
+                "component": "generate-react-cli-templates/TemplateName.tsx",
+                "story": "generate-react-cli-templates/TemplateName.stories.tsx"
+            }
         },
         "page": {
             "path": "src/pages",
-            "withStyle": true,
+            "withStyle": false,
             "withTest": false,
             "withStory": true,
-            "withLazy": true
+            "withLazy": true,
+            "customTemplates": {
+                "component": "generate-react-cli-templates/TemplateName.tsx",
+                "story": "generate-react-cli-templates/TemplateName.stories.tsx"
+            }
+        },
+        "layout": {
+            "path": "src/layouts",
+            "withStyle": false,
+            "withTest": false,
+            "withStory": true,
+            "withLazy": true,
+            "customTemplates": {
+                "component": "generate-react-cli-templates/TemplateName.tsx",
+                "story": "generate-react-cli-templates/TemplateName.stories.tsx"
+            }
         }
     }
 }

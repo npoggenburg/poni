@@ -11,7 +11,7 @@ type TextPropAs = (typeof AsTypes)[number];
 interface TextProps {
     children?: ReactNode;
     variant?: TextPropVariant;
-    as: TextPropAs;
+    as?: TextPropAs;
 }
 
 const Text: FC<TextProps> = ({children, variant = 'default', as = 'p'}) => {

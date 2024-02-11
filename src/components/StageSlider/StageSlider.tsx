@@ -1,7 +1,10 @@
 import React, {FC, ReactNode, useEffect} from 'react';
 import './StageSlider.scss';
 import {StageSlider as StageSliderLib} from './StageSlider.lib';
+import Heading from '../Heading/Heading';
+import Text from '../Text/Text';
 import Icon from '../Icon/Icon';
+import Button from '../Button/Button';
 import clsx from 'clsx';
 
 interface StageSliderProps {
@@ -26,12 +29,7 @@ const StageSlider: FC<StageSliderProps> = ({items = 1}) => {
             <div className="swiper-wrapper">
                 {itemArray.map((slide, index) => (
                     <div className="swiper-slide" key={index} data-stage-slider="slide">
-                        <img
-                            src={`//placehold.co/600x400?text=Slide ${index + 1}`}
-                            title=""
-                            alt=""
-                            className={clsx([' aspect-video max-h-[60vh] w-full object-cover'])}
-                        />
+                        <StageSliderSlide></StageSliderSlide>
                     </div>
                 ))}
             </div>
@@ -74,6 +72,28 @@ const StageSliderNavigationButton: FC<StageSliderNavigationButtonProps> = ({
             data-stage-slider={`navigation-${direction}`}
         >
             {children}
+        </div>
+    );
+};
+
+interface StageSliderSlideProps {}
+const StageSliderSlide: FC<StageSliderSlideProps> = () => {
+    return (
+        <div>
+            <div>
+                <img src="https://placehold.co/600x400" alt="" />
+            </div>
+            <div>
+                <Heading variant={'h2'} className="asd">
+                    Slide Main Title
+                </Heading>
+                <Heading variant={'h3'}>Slide Subtitle or Mini Description</Heading>
+                <Text as={'p'}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio eius fugit
+                    numquam ratione quisquam consequatur molestiae similique ipsa labore!
+                </Text>
+                <Button icon="chevron-right">Read more</Button>
+            </div>
         </div>
     );
 };
