@@ -1,4 +1,3 @@
-/* eslint-disable */
 import {Meta, StoryObj} from '@storybook/react';
 import TemplateName from './TemplateName';
 import React from 'react';

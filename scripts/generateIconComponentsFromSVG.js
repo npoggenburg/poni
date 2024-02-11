@@ -72,7 +72,6 @@ function camelCase(string) {
 
 function buildTemplate(name, content) {
     return `
-/* eslint-disable */
 import React from "react";
 import { SVGProps } from "react";
 
