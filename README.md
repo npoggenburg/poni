@@ -39,22 +39,29 @@ Run the Storybook
 
 Important commands. Find more in `package.json`
 
--   Run storybook
-    `npm run storybook`
+Run storybook
 
--   Run React Application
-    `npm run dev`
+`npm run storybook`
 
--   Build for production
-    `npm run build`
+Run React Application
 
--   Generate Icon Components from SVG files
-    `npm run generateIconComponents`
+`npm run dev`
 
--   Generate a new Component
-    `npx generate-react-cli component MyComponent --type=component`
-    `npx generate-react-cli component MyLayout --type=layout`
-    `npx generate-react-cli component MyPage --type=page`
+Build for production
+
+`npm run build`
+
+Generate Icon Components from SVG files
+
+`npm run generateIconComponents`
+
+Generate a new Component
+
+`npx generate-react-cli component MyComponent --type=component`
+
+`npx generate-react-cli component MyLayout --type=layout`
+
+`npx generate-react-cli component MyPage --type=page`
 
 ---
 
