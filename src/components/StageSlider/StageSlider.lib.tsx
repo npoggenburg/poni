@@ -18,17 +18,22 @@ export class StageSlider {
     }
 
     private init(): void {
-        // init Swiper:
         this.slider = new Swiper(this.selector, {
             modules: [Navigation, Pagination, Autoplay],
+            loop: true,
             pagination: {
                 el: '[data-stage-slider="pagination"]',
                 type: 'bullets',
-                bulletClass: clsx(['h-10 w-10 bg-blue-500']),
-                bulletActiveClass: clsx(['bg-green-500']),
+                clickable: true,
+                bulletClass: clsx(
+                    ['transition-a relative h-10 grow cursor-pointer rounded-sm transition-all'],
+                    ['hover:bg-slate-700/5'],
+                    [
+                        'before:absolute before:left-1 before:right-1 before:top-1/2 before:h-1 before:-translate-y-1/2 before:rounded-sm before:bg-slate-500 before:transition-all',
+                    ],
+                ),
+                bulletActiveClass: clsx(['before:!h-2 before:!bg-slate-700']),
             },
-
-            // Navigation arrows
             navigation: {
                 nextEl: '[data-stage-slider="navigation-next"]',
                 prevEl: '[data-stage-slider="navigation-prev"]',
