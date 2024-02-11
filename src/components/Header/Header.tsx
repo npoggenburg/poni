@@ -5,16 +5,11 @@ interface HeaderProps {}
 const Header: FC<HeaderProps> = () => {
     return (
         <header>
-            <nav className="border-gray-200 bg-white px-4 py-2.5 lg:px-6 dark:bg-gray-900">
+            <nav className="border-gray-200 bg-pink-600 px-4 py-2.5 lg:px-6">
                 <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
                     <a href="https://flowbite.com" className="flex items-center">
-                        <img
-                            src="https://flowbite.com/docs/images/logo.svg"
-                            className="mr-3 h-6 sm:h-9"
-                            alt="Flowbite Logo"
-                        />
                         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                            Flowbite
+                            Nico Poggenburg
                         </span>
                     </a>
                     <div className="flex items-center lg:order-2">
@@ -33,7 +28,7 @@ const Header: FC<HeaderProps> = () => {
                         <button
                             data-collapse-toggle="mobile-menu-2"
                             type="button"
-                            className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden  dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                             aria-controls="mobile-menu-2"
                             aria-expanded="false"
                         >
@@ -45,7 +40,7 @@ const Header: FC<HeaderProps> = () => {
                         className="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto"
                         id="mobile-menu-2"
                     >
-                        <ul className="mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:space-x-8">
+                        <ul className="mt-4 flex flex-col font-medium text-white lg:mt-0 lg:flex-row lg:space-x-8">
                             <li>
                                 <a
                                     href="#"
@@ -58,7 +53,7 @@ const Header: FC<HeaderProps> = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700  dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                                 >
                                     Company
                                 </a>
@@ -66,7 +61,7 @@ const Header: FC<HeaderProps> = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700  dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                                 >
                                     Marketplace
                                 </a>
@@ -74,7 +69,7 @@ const Header: FC<HeaderProps> = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700  dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                                 >
                                     Features
                                 </a>
@@ -82,7 +77,7 @@ const Header: FC<HeaderProps> = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700  dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                                 >
                                     Team
                                 </a>
@@ -90,7 +85,7 @@ const Header: FC<HeaderProps> = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                                    className="lg:hover:text-primary-700 block border-b border-gray-100 py-2 pl-3 pr-4 hover:bg-gray-50 lg:border-0 lg:p-0 lg:hover:bg-transparent dark:border-gray-700  dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                                 >
                                     Contact
                                 </a>

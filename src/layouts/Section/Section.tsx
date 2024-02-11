@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, {FC, ReactNode} from 'react';
 
-export const BackgroundTypes = ['white', 'gray', 'green'] as const;
+export const BackgroundTypes = ['white', 'gray', 'pink'] as const;
 type SectionPropBackground = (typeof BackgroundTypes)[number];
 
 interface SectionProps {
@@ -12,9 +12,8 @@ interface SectionProps {
 const Section: FC<SectionProps> = ({children, background = 'white'}) => {
     const classes = clsx(
         [background !== 'white' && 'py-12 first:mt-0 last:mb-0'],
-        [background === 'white' && ''],
-        [background === 'gray' && 'bg-gray-200'],
-        [background === 'green' && 'bg-green-500'],
+        [background === 'gray' && 'bg-gray-100'],
+        [background === 'pink' && 'bg-pink-600'],
         ['my-12 px-4'],
         ['lg:px-6'],
     );

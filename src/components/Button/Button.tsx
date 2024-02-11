@@ -28,8 +28,8 @@ const Button: FC<ButtonProps> = ({
     ...props
 }) => {
     const variantClasses = clsx(
-        [variant === 'primary' && 'bg-blue-500 text-white shadow-blue-500/20'],
-        [variant === 'secondary' && 'bg-red-500 text-white shadow-red-500/20'],
+        [variant === 'primary' && 'bg-pink-600 text-white shadow-pink-500/20'],
+        [variant === 'secondary' && 'bg-slate-500 text-white shadow-slate-500/20'],
         [size === 'sm' && 'gap-2 px-4 py-2 text-xs'],
         [size === 'md' && 'gap-2 px-6 py-3 text-sm'],
         [size === 'lg' && 'gap-4 px-10 py-6'],
@@ -38,7 +38,7 @@ const Button: FC<ButtonProps> = ({
         ],
         ['active:opacity-[0.85] active:shadow-none'],
         ['focus:opacity-[0.85] focus:shadow-none'],
-        ['hover:shadow-lg hover:shadow-blue-500/40'],
+        ['hover:shadow-lg hover:shadow-slate-500/40'],
         ['disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'],
         ['inline-flex items-center'],
     );

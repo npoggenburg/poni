@@ -24,27 +24,25 @@ const StageSlider: FC<StageSliderProps> = ({items = 1}) => {
     const itemArray = Array.from({length: items}, (_, index) => index + 1);
 
     return (
-        <div className="">
-            <div className="swiper mx-auto max-w-screen-xl" data-stage-slider="container">
-                <div className="swiper-wrapper">
-                    {itemArray.map((slide, index) => (
-                        <div className="swiper-slide" key={index} data-stage-slider="slide">
-                            <StageSliderSlide></StageSliderSlide>
-                        </div>
-                    ))}
-                </div>
-                <div
-                    className={clsx(['flex hidden content-stretch items-center gap-1'])}
-                    data-stage-slider="pagination"
-                ></div>
-
-                <StageSliderNavigationButton direction={'prev'}>
-                    <Icon name="chevron-left" size="md" />
-                </StageSliderNavigationButton>
-                <StageSliderNavigationButton direction={'next'}>
-                    <Icon name="chevron-right" size="md" />
-                </StageSliderNavigationButton>
+        <div className="swiper mx-auto mb-12 max-w-screen-xl" data-stage-slider="container">
+            <div className="swiper-wrapper">
+                {itemArray.map((slide, index) => (
+                    <div className="swiper-slide" key={index} data-stage-slider="slide">
+                        <StageSliderSlide></StageSliderSlide>
+                    </div>
+                ))}
             </div>
+            <div
+                className={clsx(['flex hidden content-stretch items-center gap-1'])}
+                data-stage-slider="pagination"
+            ></div>
+
+            <StageSliderNavigationButton direction={'prev'}>
+                <Icon name="chevron-left" size="md" />
+            </StageSliderNavigationButton>
+            <StageSliderNavigationButton direction={'next'}>
+                <Icon name="chevron-right" size="md" />
+            </StageSliderNavigationButton>
         </div>
     );
 };
@@ -61,9 +59,9 @@ const StageSliderNavigationButton: FC<StageSliderNavigationButtonProps> = ({
         <div
             className={clsx(
                 [
-                    ' supports-backdrop-blur:bg-slate/95 h-20 w-10 rounded-sm bg-slate-900/50 text-white backdrop-blur transition-all',
+                    ' supports-backdrop-blur:bg-slate/95 h-20 w-10 rounded-sm bg-slate-950/80 text-white backdrop-blur transition-all',
                 ],
-                ['hover:bg-slate-900/70'],
+                ['hover:bg-slate-950'],
                 [
                     'absolute top-1/2 z-10 -mt-5 flex hidden -translate-y-1/2 transform-gpu cursor-pointer items-center justify-center',
                 ],

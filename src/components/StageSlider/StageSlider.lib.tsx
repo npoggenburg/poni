@@ -42,12 +42,12 @@ export class StageSlider {
                           [
                               'transition-a relative h-10 grow cursor-pointer rounded-sm transition-all',
                           ],
-                          ['hover:bg-slate-700/5'],
+                          ['hover:bg-slate-950/5'],
                           [
-                              'before:absolute before:left-1 before:right-1 before:top-1/2 before:h-1 before:-translate-y-1/2 before:rounded-sm before:bg-slate-500 before:transition-all',
+                              'before:absolute before:left-1 before:right-1 before:top-1/2 before:h-1 before:-translate-y-1/2 before:rounded-sm before:bg-slate-950 before:transition-all',
                           ],
                       ),
-                      bulletActiveClass: clsx(['before:!h-2 before:!bg-slate-700']),
+                      bulletActiveClass: clsx(['before:!h-2 before:!bg-slate-950']),
                   }
                 : false,
             navigation: enableControls

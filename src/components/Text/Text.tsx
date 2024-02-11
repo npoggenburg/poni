@@ -17,7 +17,7 @@ const Text: FC<TextProps> = ({children, variant = 'default', as = 'p'}) => {
     const As = as;
 
     const classes = clsx(
-        ['prose'],
+        ['prose text-inherit'],
         [variant == 'tiny' && 'text-xs'],
         [variant == 'small' && 'prose-sm'],
         [variant == 'lead' && 'prose-lg'],

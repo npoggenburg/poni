@@ -4,7 +4,7 @@ import Footer from './Footer';
 import React from 'react';
 
 const meta: Meta<typeof Footer> = {
-    title: 'Unsorted/Footer',
+    title: 'Elements/Components/Footer',
     component: Footer,
     tags: ['autodocs'],
     argTypes: {},
