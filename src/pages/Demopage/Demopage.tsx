@@ -8,6 +8,8 @@ import Grid from '../../layouts/Grid/Grid';
 import Column from '../../layouts/Grid/Column';
 import Heading from '../../components/Heading/Heading';
 import Text from '../../components/Text/Text';
+import Stack from '../../layouts/Stack/Stack';
+import Icon from '../../components/Icon/Icon';
 
 interface DemopageProps {}
 
@@ -16,6 +18,27 @@ const Demopage: FC<DemopageProps> = () => (
         <Header />
         <StageSlider items={5} />
         <main>
+            <Section>
+                <Grid columns={1}>
+                    <Column>
+                        <Heading variant={'h3'}>Some Icons in a Stack</Heading>
+                        <Stack spacing={'md'} divider={true}>
+                            <div className="">
+                                <Icon name="chevron-up" size="md" />
+                            </div>
+                            <div className="">
+                                <Icon name="chevron-right" size="md" />
+                            </div>
+                            <div className="">
+                                <Icon name="chevron-down" size="md" />
+                            </div>
+                            <div className="">
+                                <Icon name="chevron-left" size="md" />
+                            </div>
+                        </Stack>
+                    </Column>
+                </Grid>
+            </Section>
             <Section background="pink">
                 <Grid columns={3}>
                     <Column>

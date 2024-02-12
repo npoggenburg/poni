@@ -82,7 +82,7 @@ const StageSliderSlide: FC<StageSliderSlideProps> = () => {
             <div>
                 <img src="https://placehold.co/600x400" alt="" />
             </div>
-            <div className="p-6">
+            <div className="prose p-6">
                 <Heading variant={'h2'}>Slide Main Title</Heading>
                 <Heading variant={'h3'}>Slide Subtitle or Mini Description</Heading>
                 <Text as={'p'}>

@@ -10,14 +10,17 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:storybook/recommended',
     ],
-    ignorePatterns: ['dist', '.eslintrc.cjs'],
-    parserOptions: {ecmaVersion: 'latest', sourceType: 'module'},
+    ignorePatterns: ['dist', '.eslintrc.cjs', 'src/**/*.stories.tsx'],
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+    },
     settings: {react: {version: '18.2'}},
     plugins: ['react-refresh', 'react'],
     rules: {
         'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
-        'react/jsx-uses-vars': 'error',
         'react/jsx-uses-react': 'error',
+        'react/jsx-uses-vars': 'error',
         'react/no-unescaped-entities': 0,
     },
 };
