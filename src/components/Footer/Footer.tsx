@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import Stack from '../../layouts/Stack/Stack';
 
 interface FooterProps {}
 
@@ -15,28 +16,20 @@ const Footer: FC<FooterProps> = () => {
                             Nico Poggenburg
                         </span>
                     </a>
-                    <ul className="mb-6 flex flex-wrap items-center text-sm font-medium sm:mb-0">
-                        <li>
-                            <a href="#" className="me-4 hover:underline md:me-6">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="me-4 hover:underline md:me-6">
-                                Privacy Policy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="me-4 hover:underline md:me-6">
-                                Licensing
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="hover:underline">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
+                    <Stack>
+                        <a href="#" className="hover:underline">
+                            About
+                        </a>
+                        <a href="#" className="hover:underline">
+                            Privacy Policy
+                        </a>
+                        <a href="#" className="hover:underline">
+                            Licensing
+                        </a>
+                        <a href="#" className="hover:underline">
+                            Contact
+                        </a>
+                    </Stack>
                 </div>
                 <hr className="border-white-200 my-6 sm:mx-auto lg:my-8" />
                 <span className="block text-sm sm:text-center">

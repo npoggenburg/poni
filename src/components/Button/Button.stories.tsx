@@ -1,6 +1,6 @@
 import {Meta, StoryObj} from '@storybook/react';
 import Button, {IconPositionTypes, SizeTypes, VariantTypes} from './Button';
-import { IconTypes } from '../Icon/Icon';
+import {IconTypes} from '../Icon/Icon';
 
 const meta: Meta<typeof Button> = {
     title: 'Elements/Atoms/Button',
@@ -8,29 +8,29 @@ const meta: Meta<typeof Button> = {
     tags: ['autodocs'],
     argTypes: {
         children: {
-            control: { type: 'text' },
-            description: 'The content of the button. Can be a Text or more complex HTML.'
+            control: {type: 'text'},
+            description: 'The content of the button. Can be a Text or more complex HTML.',
         },
         variant: {
             options: VariantTypes,
-            control: { type: 'radio' },
-            description: 'Variant of the button. Like different color, borders etc.'
+            control: {type: 'radio'},
+            description: 'Variant of the button. Like different color, borders etc.',
         },
         size: {
             options: SizeTypes,
             control: {type: 'radio'},
-            description: 'Button sizes.'
+            description: 'Button sizes.',
         },
         icon: {
             options: ['', ...IconTypes],
             control: {type: 'select'},
-            description: 'Available Icons to display inside the button.'
+            description: 'Available Icons to display inside the button.',
         },
         iconPosition: {
             options: IconPositionTypes,
             control: {type: 'radio'},
             description: 'Position of the icon inside a button',
-            if: { arg: 'icon', neq: '' }
+            if: {arg: 'icon', neq: ''},
         },
     },
 };
@@ -91,7 +91,7 @@ export const Icon: Story = {
     name: 'With Icon',
     args: {
         children: 'Icon button',
-        icon: 'chevron-right',
+        icon: 'ChevronRight',
     },
 };
 
@@ -99,7 +99,7 @@ export const IconBefore: Story = {
     name: 'Icon/Before',
     args: {
         children: 'Icon button',
-        icon: 'chevron-right',
+        icon: 'ChevronRight',
         iconPosition: 'before',
     },
 };
@@ -108,7 +108,7 @@ export const IconAfter: Story = {
     name: 'Icon/After',
     args: {
         children: 'Icon button',
-        icon: 'chevron-right',
+        icon: 'ChevronRight',
         iconPosition: 'after',
     },
 };

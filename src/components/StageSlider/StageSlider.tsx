@@ -38,10 +38,10 @@ const StageSlider: FC<StageSliderProps> = ({items = 1}) => {
             ></div>
 
             <StageSliderNavigationButton direction={'prev'}>
-                <Icon name="chevron-left" size="md" />
+                <Icon name="ChevronLeft" size="md" />
             </StageSliderNavigationButton>
             <StageSliderNavigationButton direction={'next'}>
-                <Icon name="chevron-right" size="md" />
+                <Icon name="ChevronRight" size="md" />
             </StageSliderNavigationButton>
         </div>
     );
@@ -89,7 +89,7 @@ const StageSliderSlide: FC<StageSliderSlideProps> = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio eius fugit
                     numquam ratione quisquam consequatur molestiae similique ipsa labore!
                 </Text>
-                <Button icon="chevron-right">Read more</Button>
+                <Button icon="ChevronRight">Read more</Button>
             </div>
         </div>
     );

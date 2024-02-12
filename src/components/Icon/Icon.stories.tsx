@@ -5,7 +5,7 @@ export default {
     title: 'Elements/Atoms/Icon',
 };
 
-export const Default = () => <Icon name="chevron-up" />;
+export const Default = () => <Icon name="ChevronUp" />;
 
 Default.story = {
     name: 'default',

@@ -1,8 +1,23 @@
-import React, {FC, Suspense, lazy} from 'react';
+import React, {FC, SVGAttributes, Suspense, lazy} from 'react';
 import clsx from 'clsx';
 
-export const IconTypes = ['chevron-up', 'chevron-right', 'chevron-down', 'chevron-left'] as const;
+export const IconTypes = [
+    'ChevronUp',
+    'ChevronRight',
+    'ChevronDown',
+    'ChevronLeft',
+    'Bars',
+] as const;
 type IconPropName = (typeof IconTypes)[number];
+interface IconComponentProps extends SVGAttributes<SVGElement> {}
+/* eslint-ignore */
+const iconComponents: {[key: string]: () => Promise<{default: FC<IconComponentProps>}>} = {
+    ChevronUp: () => import('./Icons/ChevronUpSolid'),
+    ChevronRight: () => import('./Icons/ChevronRightSolid'),
+    ChevronDown: () => import('./Icons/ChevronDownSolid'),
+    ChevronLeft: () => import('./Icons/ChevronLeftSolid'),
+    Bars: () => import('./Icons/BarsSolid'),
+};
 
 export const SizeTypes = ['sm', 'md', 'lg'] as const;
 type IconPropSize = (typeof SizeTypes)[number];
@@ -13,33 +28,23 @@ interface IconProps {
 }
 
 const Icon: FC<IconProps> = ({name, size}) => {
-    const ChevronUpIcon = lazy(() => import('./Icons/Chevron-up-solid'));
-    const ChevronRightIcon = lazy(() => import('./Icons/Chevron-right-solid'));
-    const ChevronDownIcon = lazy(() => import('./Icons/Chevron-down-solid'));
-    const ChevronLeftIcon = lazy(() => import('./Icons/Chevron-left-solid'));
-
     const classes = clsx(
         [size === 'sm' && 'h-4 w-4'],
         [size === 'md' && 'h-6 w-6'],
         [size === 'lg' && 'h-8 w-8'],
     );
 
-    const iconComponents: {[key: string]: JSX.Element} = {
-        'chevron-up': <ChevronUpIcon className={classes} />,
-        'chevron-right': <ChevronRightIcon className={classes} />,
-        'chevron-down': <ChevronDownIcon className={classes} />,
-        'chevron-left': <ChevronLeftIcon className={classes} />,
-    };
+    const DynamicIconComponent = lazy(iconComponents[name]);
 
-    const IconComponent = iconComponents[name];
-
-    if (!IconComponent) {
+    if (!DynamicIconComponent) {
         return null;
     }
 
     return (
         <i role="img" aria-label={name}>
-            <Suspense>{IconComponent}</Suspense>
+            <Suspense>
+                <DynamicIconComponent className={classes} />
+            </Suspense>
         </i>
     );
 };

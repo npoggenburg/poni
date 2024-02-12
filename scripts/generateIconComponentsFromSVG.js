@@ -18,7 +18,7 @@ console.log('## Building components from svgs');
 svgFiles.forEach((file) => {
     const fileName = path.basename(file, '.svg');
     const capitalizedFileName = camelCase(fileName);
-    const outputFilePath = path.join(outputFolder, `${fileName}.tsx`);
+    const outputFilePath = path.join(outputFolder, `${capitalizedFileName}.tsx`);
     const svgContent = fs.readFileSync(file, 'utf8');
 
     if (!svgContent.match(/(\/?>)/)) {
@@ -76,7 +76,7 @@ import React from "react";
 import { SVGProps } from "react";
 
 const ${name}: React.FC<SVGProps<SVGSVGElement>> = (props) => (
-    ${content.replace(/(\/?>)/, ' {...props}>')}
+    ${content.replace(/(\/?>)/, ' {...props}>').replace(/<\!--.*?-->/g, '')}
 );
 
 export default ${name};

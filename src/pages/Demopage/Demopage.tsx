@@ -24,16 +24,16 @@ const Demopage: FC<DemopageProps> = () => (
                         <Heading variant={'h3'}>Some Icons in a Stack</Heading>
                         <Stack spacing={'md'} divider={true}>
                             <div className="">
-                                <Icon name="chevron-up" size="md" />
+                                <Icon name="ChevronUp" size="md" />
                             </div>
                             <div className="">
-                                <Icon name="chevron-right" size="md" />
+                                <Icon name="ChevronRight" size="md" />
                             </div>
                             <div className="">
-                                <Icon name="chevron-down" size="md" />
+                                <Icon name="ChevronDown" size="md" />
                             </div>
                             <div className="">
-                                <Icon name="chevron-left" size="md" />
+                                <Icon name="ChevronLeft" size="md" />
                             </div>
                         </Stack>
                     </Column>
