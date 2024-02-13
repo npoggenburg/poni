@@ -125,19 +125,28 @@ const Demopage: FC<DemopageProps> = () => (
                     <Column>
                         <div className="flex flex-col gap-4 text-white">
                             <Heading variant={'h3'}>My Column 1</Heading>
-                            <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
+                            <Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum,
+                                asperiores quisquam earum perspiciatis deserunt alias autem.
+                            </Text>
                         </div>
                     </Column>
                     <Column>
                         <div className="flex flex-col gap-4 text-white">
                             <Heading variant={'h3'}>My Column 1</Heading>
-                            <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
+                            <Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum,
+                                asperiores quisquam earum perspiciatis deserunt alias autem.
+                            </Text>
                         </div>
                     </Column>
                     <Column>
                         <div className="flex flex-col gap-4 text-white">
                             <Heading variant={'h3'}>My Column 1</Heading>
-                            <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
+                            <Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum,
+                                asperiores quisquam earum perspiciatis deserunt alias autem.
+                            </Text>
                         </div>
                     </Column>
                 </Grid>
@@ -147,16 +156,20 @@ const Demopage: FC<DemopageProps> = () => (
                     <Column>
                         <Heading variant={'h3'}>My Column 1</Heading>
                         <Text>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem. Lorem ipsum dolor sit
-                            amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum,
+                            asperiores quisquam earum perspiciatis deserunt alias autem. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum
+                            perspiciatis deserunt alias autem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.
                         </Text>
                     </Column>
                     <Column>
                         <Heading variant={'h3'}>My Column 1</Heading>
                         <Text>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem. Lorem ipsum dolor sit
-                            amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum,
+                            asperiores quisquam earum perspiciatis deserunt alias autem. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum
+                            perspiciatis deserunt alias autem.
                         </Text>
                     </Column>
                 </Grid>
@@ -168,7 +181,10 @@ const Demopage: FC<DemopageProps> = () => (
                     </Column>
                     <Column>
                         <Heading variant={'h3'}>My Column 1</Heading>
-                        <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
+                        <Text>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum,
+                            asperiores quisquam earum perspiciatis deserunt alias autem.
+                        </Text>
                     </Column>
                 </Grid>
             </Section>
@@ -176,14 +192,17 @@ const Demopage: FC<DemopageProps> = () => (
                 <Grid columns={2}>
                     <Column>
                         <Heading variant={'h3'}>My Column 1</Heading>
-                        <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
+                        <Text>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum,
+                            asperiores quisquam earum perspiciatis deserunt alias autem.
+                        </Text>
                     </Column>
                     <Column>
                         <img src="https://placehold.co/600x400" className="w-full" alt="" />
                     </Column>
                 </Grid>
             </Section>
-            <Section>
+            <Section fullWidth={true}>
                 <Grid columns={3}>
                     <Column>
                         <img src="https://placehold.co/600x400" className="w-full" alt="" />

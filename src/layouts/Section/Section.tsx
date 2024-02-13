@@ -7,9 +7,10 @@ type SectionPropBackground = (typeof BackgroundTypes)[number];
 interface SectionProps {
     children?: ReactNode;
     background?: SectionPropBackground;
+    fullWidth?: boolean;
 }
 
-const Section: FC<SectionProps> = ({children, background = 'white'}) => {
+const Section: FC<SectionProps> = ({children, background = 'white', fullWidth = false}) => {
     const classes = clsx(
         [background !== 'white' && 'py-12 first:mt-0 last:mb-0'],
         [background === 'gray' && 'bg-gray-100'],
@@ -19,7 +20,7 @@ const Section: FC<SectionProps> = ({children, background = 'white'}) => {
     );
     return (
         <section className={classes}>
-            <div className={clsx(['mx-auto max-w-screen-xl'])}>{children}</div>
+            <div className={clsx([!fullWidth && 'mx-auto max-w-screen-xl'])}>{children}</div>
         </section>
     );
 };
