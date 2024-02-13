@@ -1,5 +1,5 @@
 import {Meta, StoryObj} from '@storybook/react';
-import Button, {IconPositionTypes, SizeTypes, VariantTypes} from './Button';
+import Button, {ColorTypes, IconPositionTypes, SizeTypes, VariantTypes} from './Button';
 import {IconTypes} from '../Icon/Icon';
 
 const meta: Meta<typeof Button> = {
@@ -20,6 +20,11 @@ const meta: Meta<typeof Button> = {
             options: SizeTypes,
             control: {type: 'radio'},
             description: 'Button sizes.',
+        },
+        color: {
+            options: ColorTypes,
+            control: {type: 'select'},
+            description: 'Available colors.',
         },
         icon: {
             options: ['', ...IconTypes],
@@ -43,7 +48,7 @@ export const Default: Story = {
     name: 'Variant/Default',
     args: {
         children: 'Default button',
-        variant: 'primary',
+        variant: 'filled',
     },
 };
 
@@ -51,7 +56,7 @@ export const Primary: Story = {
     name: 'Variant/Primary',
     args: {
         children: 'Primary button',
-        variant: 'primary',
+        variant: 'filled',
     },
 };
 
@@ -59,7 +64,7 @@ export const Secondary: Story = {
     name: 'Variant/Secondary',
     args: {
         children: 'Secondary button',
-        variant: 'secondary',
+        variant: 'outlined',
     },
 };
 
@@ -110,5 +115,13 @@ export const IconAfter: Story = {
         children: 'Icon button',
         icon: 'ChevronRight',
         iconPosition: 'after',
+    },
+};
+
+export const IconOnly: Story = {
+    name: 'Icon Only',
+    args: {
+        children: '',
+        icon: 'ChevronRight',
     },
 };

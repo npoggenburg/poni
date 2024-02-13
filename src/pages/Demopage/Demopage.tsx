@@ -10,6 +10,7 @@ import Heading from '../../components/Heading/Heading';
 import Text from '../../components/Text/Text';
 import Stack from '../../layouts/Stack/Stack';
 import Icon from '../../components/Icon/Icon';
+import Button from '../../components/Button/Button';
 
 interface DemopageProps {}
 
@@ -18,6 +19,86 @@ const Demopage: FC<DemopageProps> = () => (
         <Header />
         <StageSlider items={5} />
         <main>
+            <Section>
+                <Stack>
+                    <Button variant="filled" icon="ChevronRight" color="black">
+                        My Button
+                    </Button>
+                    <Button variant="filled" color="white">
+                        My Button
+                    </Button>
+                    <Button variant="filled" color="gray">
+                        My Button
+                    </Button>
+                    <Button variant="filled" color="primary">
+                        My Button
+                    </Button>
+                    <Button variant="outlined" color="black">
+                        My Button
+                    </Button>
+                    <Button variant="outlined" color="white">
+                        My Button
+                    </Button>
+                    <Button variant="outlined" color="gray">
+                        My Button
+                    </Button>
+                    <Button variant="outlined" color="primary">
+                        My Button
+                    </Button>
+                    <Button variant="text" color="black" icon="Bars" iconPosition="after">
+                        My Button
+                    </Button>
+                    <Button variant="text" color="white">
+                        My Button
+                    </Button>
+                    <Button variant="text" color="gray">
+                        My Button
+                    </Button>
+                    <Button variant="text" color="primary">
+                        My Button
+                    </Button>
+                </Stack>
+            </Section>
+            <Section background="pink">
+                <Stack>
+                    <Button variant="filled" color="black">
+                        My Button
+                    </Button>
+                    <Button variant="filled" color="white">
+                        My Button
+                    </Button>
+                    <Button variant="filled" color="gray">
+                        My Button
+                    </Button>
+                    <Button variant="filled" color="primary">
+                        My Button
+                    </Button>
+                    <Button variant="outlined" color="black">
+                        My Button
+                    </Button>
+                    <Button variant="outlined" color="white">
+                        My Button
+                    </Button>
+                    <Button variant="outlined" color="gray">
+                        My Button
+                    </Button>
+                    <Button variant="outlined" color="primary">
+                        My Button
+                    </Button>
+                    <Button variant="text" color="black">
+                        My Button
+                    </Button>
+                    <Button variant="text" color="white">
+                        My Button
+                    </Button>
+                    <Button variant="text" color="gray">
+                        My Button
+                    </Button>
+                    <Button variant="text" color="primary">
+                        My Button
+                    </Button>
+                </Stack>
+            </Section>
             <Section>
                 <Grid columns={1}>
                     <Column>
@@ -44,31 +125,19 @@ const Demopage: FC<DemopageProps> = () => (
                     <Column>
                         <div className="flex flex-col gap-4 text-white">
                             <Heading variant={'h3'}>My Column 1</Heading>
-                            <Text>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a
-                                neque facere dolorum, asperiores quisquam earum perspiciatis
-                                deserunt alias autem.
-                            </Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
                         </div>
                     </Column>
                     <Column>
                         <div className="flex flex-col gap-4 text-white">
                             <Heading variant={'h3'}>My Column 1</Heading>
-                            <Text>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a
-                                neque facere dolorum, asperiores quisquam earum perspiciatis
-                                deserunt alias autem.
-                            </Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
                         </div>
                     </Column>
                     <Column>
                         <div className="flex flex-col gap-4 text-white">
                             <Heading variant={'h3'}>My Column 1</Heading>
-                            <Text>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a
-                                neque facere dolorum, asperiores quisquam earum perspiciatis
-                                deserunt alias autem.
-                            </Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
                         </div>
                     </Column>
                 </Grid>
@@ -78,23 +147,16 @@ const Demopage: FC<DemopageProps> = () => (
                     <Column>
                         <Heading variant={'h3'}>My Column 1</Heading>
                         <Text>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque
-                            facere dolorum, asperiores quisquam earum perspiciatis deserunt alias
-                            autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                            a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt
-                            alias autem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis
-                            deserunt alias autem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem. Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.
                         </Text>
                     </Column>
                     <Column>
                         <Heading variant={'h3'}>My Column 1</Heading>
                         <Text>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque
-                            facere dolorum, asperiores quisquam earum perspiciatis deserunt alias
-                            autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                            a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt
-                            alias autem.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem. Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.
                         </Text>
                     </Column>
                 </Grid>
@@ -106,11 +168,7 @@ const Demopage: FC<DemopageProps> = () => (
                     </Column>
                     <Column>
                         <Heading variant={'h3'}>My Column 1</Heading>
-                        <Text>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque
-                            facere dolorum, asperiores quisquam earum perspiciatis deserunt alias
-                            autem.
-                        </Text>
+                        <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
                     </Column>
                 </Grid>
             </Section>
@@ -118,11 +176,7 @@ const Demopage: FC<DemopageProps> = () => (
                 <Grid columns={2}>
                     <Column>
                         <Heading variant={'h3'}>My Column 1</Heading>
-                        <Text>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque
-                            facere dolorum, asperiores quisquam earum perspiciatis deserunt alias
-                            autem.
-                        </Text>
+                        <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a neque facere dolorum, asperiores quisquam earum perspiciatis deserunt alias autem.</Text>
                     </Column>
                     <Column>
                         <img src="https://placehold.co/600x400" className="w-full" alt="" />

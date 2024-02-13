@@ -4,7 +4,7 @@ import React, {Children, FC, ReactNode} from 'react';
 export const DirectionTypes = ['row', 'col'] as const;
 type StackPropDirection = (typeof DirectionTypes)[number];
 
-export const SpacingTypes = ['sm', 'md', 'lg'] as const;
+export const SpacingTypes = ['none', 'sm', 'md', 'lg'] as const;
 type StackPropSpacing = (typeof SpacingTypes)[number];
 
 interface StackProps {
@@ -70,6 +70,7 @@ const Stack: FC<StackProps> = ({children, divider = false, direction = 'row', sp
         [typeof direction === 'object' && direction.xl === 'col' && 'xl:flex-col'],
         [typeof direction === 'object' && direction.xxl === 'row' && '2xl:flex-row'],
         [typeof direction === 'object' && direction.xxl === 'col' && '2xl:flex-col'],
+        [!divider && 'flex-wrap'],
         ['flex'],
     );
 

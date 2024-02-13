@@ -1,41 +1,41 @@
 import React, {FC} from 'react';
 import Stack from '../../layouts/Stack/Stack';
+import Logo from '../Logo/Logo';
+import Button from '../Button/Button';
 
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
     return (
-        <footer className="bg-pink-600 px-4 text-white shadow lg:px-6">
+        <footer className="rounded-lg bg-slate-950 px-4 text-white shadow lg:px-6">
             <div className="mx-auto w-full max-w-screen-xl py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <a
-                        href="https://flowbite.com/"
-                        className="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"
-                    >
-                        <span className="self-center whitespace-nowrap text-2xl font-semibold uppercase dark:text-white">
-                            Nico Poggenburg
-                        </span>
+                    <a href="#" className="flex items-center">
+                        <Logo />
                     </a>
-                    <Stack>
-                        <a href="#" className="hover:underline">
+                    <Stack spacing={'none'}>
+                        <Button as="a" variant="text" size="sm" color="white">
                             About
-                        </a>
-                        <a href="#" className="hover:underline">
+                        </Button>
+                        <Button as="a" variant="text" size="sm" color="white">
                             Privacy Policy
-                        </a>
-                        <a href="#" className="hover:underline">
+                        </Button>
+                        <Button as="a" variant="text" size="sm" color="white">
                             Licensing
-                        </a>
-                        <a href="#" className="hover:underline">
+                        </Button>
+                        <Button as="a" variant="text" size="sm" color="white">
+                            Features
+                        </Button>
+                        <Button as="a" variant="text" size="sm" color="white">
                             Contact
-                        </a>
+                        </Button>
                     </Stack>
                 </div>
                 <hr className="border-white-200 my-6 sm:mx-auto lg:my-8" />
                 <span className="block text-sm sm:text-center">
-                    © 2023{' '}
-                    <a href="https://flowbite.com/" className="hover:underline">
-                        Flowbite™
+                    © {new Date().getFullYear() + ' '}
+                    <a href="#" className="hover:underline">
+                        Nico Poggenburg
                     </a>
                     . All Rights Reserved.
                 </span>

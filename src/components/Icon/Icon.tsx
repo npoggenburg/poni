@@ -1,13 +1,7 @@
 import React, {FC, SVGAttributes, Suspense, lazy} from 'react';
 import clsx from 'clsx';
 
-export const IconTypes = [
-    'ChevronUp',
-    'ChevronRight',
-    'ChevronDown',
-    'ChevronLeft',
-    'Bars',
-] as const;
+export const IconTypes = ['ChevronUp', 'ChevronRight', 'ChevronDown', 'ChevronLeft', 'Bars'] as const;
 type IconPropName = (typeof IconTypes)[number];
 interface IconComponentProps extends SVGAttributes<SVGElement> {}
 /* eslint-ignore */
@@ -28,11 +22,7 @@ interface IconProps {
 }
 
 const Icon: FC<IconProps> = ({name, size}) => {
-    const classes = clsx(
-        [size === 'sm' && 'h-4 w-4'],
-        [size === 'md' && 'h-6 w-6'],
-        [size === 'lg' && 'h-8 w-8'],
-    );
+    const classes = clsx([size === 'sm' && 'h-4 w-4'], [size === 'md' && 'h-6 w-6'], [size === 'lg' && 'h-8 w-8']);
 
     const DynamicIconComponent = lazy(iconComponents[name]);
 
@@ -41,7 +31,7 @@ const Icon: FC<IconProps> = ({name, size}) => {
     }
 
     return (
-        <i role="img" aria-label={name}>
+        <i role="img" aria-label={name} className="fill-current">
             <Suspense>
                 <DynamicIconComponent className={classes} />
             </Suspense>
