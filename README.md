@@ -59,6 +59,8 @@ Generate a new Component
 
 `npx generate-react-cli component MyComponent --type=component`
 
+`npx generate-react-cli component MyModule --type=module`
+
 `npx generate-react-cli component MyLayout --type=layout`
 
 `npx generate-react-cli component MyPage --type=page`
@@ -99,6 +101,8 @@ const variantClasses = clsx(
 ---
 
 ## Get Help
+
+-   [Faker Documentation](https://fakerjs.dev/api/)
 
 -   [Storybook Documentation](https://storybook.js.org/docs/)
 
